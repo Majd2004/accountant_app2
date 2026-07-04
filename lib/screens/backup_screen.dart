@@ -156,7 +156,7 @@ class _BackupScreenState extends State<BackupScreen> {
   }
 
   Future<void> _restoreBackup() async {
-    final result = await FilePicker.platform.pickFiles(type: FileType.any);
+    final result = await FilePicker.pickFiles(type: FileType.any);
     if (result == null || result.files.isEmpty) return;
     final path = result.files.first.path;
     if (path == null) return;
